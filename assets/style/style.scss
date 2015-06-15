@@ -1,12 +1,125 @@
-/*!
-Theme Name: Praise
-Theme URI: http://faithmade.com
-Author: Faithmade
-Author URI: http://faithmade.com
-Description: Wordpress child theme for Rock
-Template: rock
-Version: 0.0.1
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: praise
-*/
+@import 'info';
+@import 'config/colors';
+@import 'config/type';
+
+body {
+  background: #fff;
+}
+
+* {
+  font-family: $serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.widget-title {
+  font-family: $sans;
+}
+
+a {
+  color: $primary;
+
+  &:hover {
+    color: darken($primary, 10%);
+  }
+}
+
+button,
+.button,
+a.button,
+a.button:visited,
+input[type='submit'] {
+  background: $primary;
+  color: $darkgrey;
+
+  &:hover {
+    background: darken($primary, 10%);
+    color: $darkgrey;
+  }
+}
+
+.site-header {
+  background-image: url('assets/images/header.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 60%;
+}
+
+.site-logo {
+  max-height: 60px;
+
+  img {
+    width: auto;
+  }
+}
+
+.site-title,
+.site-title a {
+  color: #fff;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.site-description {
+  color: #fff;
+  color: rgba(#fff,.8);
+}
+
+.main-navigation-container {
+  background: transparent;
+}
+
+.main-navigation {
+  background: #fff;
+  border-bottom: 1px solid $lightgrey;
+
+  li {
+
+    a {
+      color: $grey;
+    }
+
+    &:hover {
+
+      > a {
+        background-color: transparent;
+        color: $primary;
+      }
+    }
+  }
+
+  li.menu-item-has-children:hover > ul {
+    background: rgba(#fff,.95);
+    border: 1px solid $lightgrey;
+    border-top-width: 0;
+
+    a {
+      padding-top: .75em;
+      padding-top: .75rem;
+      padding-bottom: .75em;
+      padding-bottom: .75rem;
+    }
+  }
+}
+
+.widget {
+  background: #333;
+  color: #fff;
+
+  header & {
+    background-color: transparent;
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.widget-title {
+  color: #fff;
+}
+
+.hentry {
+  padding: 0 1em;
+  padding: 0 1rem;
+}
