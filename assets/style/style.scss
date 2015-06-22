@@ -71,6 +71,8 @@ input[type='submit'] {
 
 .main-navigation {
   background: #fff;
+  background: linear-gradient( top, rgba(#fff,.8), #fff );
+  border-radius: 4px 4px 0 0;
   border-bottom: 1px solid $lightgrey;
 
   li {
