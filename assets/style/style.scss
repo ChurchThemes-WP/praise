@@ -15,12 +15,23 @@ h1, h2, h3, h4, h5, h6,
   font-family: $sans;
 }
 
-a {
+a,
+a:visited,
+.entry-footer a {
   color: $primary;
 
   &:hover {
     color: darken($primary, 10%);
   }
+}
+
+abbr {
+  color: $lightgrey;
+  font-family: $sans;
+  font-size: .7em;
+  font-size: .7rem;
+  font-weight: 600;
+  vertical-align: top;
 }
 
 button,
