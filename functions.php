@@ -8,3 +8,5 @@ function enqueue_child_theme_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'enqueue_child_theme_styles' );
+
+require_once get_template_directory() . '/inc/colorcase.php';
