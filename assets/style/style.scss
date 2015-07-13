@@ -79,7 +79,7 @@ input[type='submit'] {
 
 .main-navigation {
   background: #fff;
-  background: linear-gradient( top, rgba(#fff,.8), #fff );
+  background: linear-gradient( to bottom, rgba(#fff,.8), #fff );
   border-radius: 4px 4px 0 0;
   border-bottom: 1px solid $lightgrey;
 
@@ -89,8 +89,8 @@ input[type='submit'] {
       color: $grey;
     }
 
-    .current-menu-item,
-    &:hover {
+    &:hover,
+    &.current-menu-item {
 
       > a {
         background-color: transparent;
