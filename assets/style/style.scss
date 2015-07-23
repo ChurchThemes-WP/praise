@@ -135,7 +135,7 @@ input[type='submit'] {
 }
 
 .widget_search {
-  background: rgba(darken(#3A99D8,30%),.7);
+  background: #587A90;
 
   form {
     padding: 4px;
@@ -156,7 +156,7 @@ input[type='submit'] {
 }
 
 .widget-title {
-  background: rgba(darken(#3A99D8,30%),.7);
+  background: #587A90;
   padding: 1em 1.5em;
   padding: 1rem 1.5rem;
   margin-bottom: 1.5em;
@@ -191,4 +191,36 @@ input[type='submit'] {
 .hentry {
   padding: 0 1em;
   padding: 0 1rem;
+}
+
+.site-footer {
+  background: $lightgrey;
+
+
+  .footer-widget-area .footer-widget .widget {
+    background: #fff;
+    color: $grey;
+
+    .widget-title {
+      background: $primary;
+      background: #587A90;
+      border-color: #587A90;
+      padding-bottom: 1em;
+      padding-bottom: 1rem;
+      border: 0;
+    }
+
+    a {
+      color: $primary;
+    }
+
+    > ul {
+      margin-top: -.5em;
+      margin-top: -.5rem;
+    }
+
+    li {
+      border-color: $lightgrey;
+    }
+  }
 }
