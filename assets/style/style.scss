@@ -129,7 +129,7 @@ input[type='submit'] {
     }
   }
 
-  li {
+  ul, li {
     border-color: rgba(#333,.1);
   }
 }
@@ -171,9 +171,21 @@ input[type='submit'] {
 }
 
 .widget_nav_menu {
-  padding: 1em 1.5em;
-  padding: 1rem 1.5rem;
-  padding-bottom: 0;
+  .widget-title {
+    margin-bottom: 0;
+  }
+
+  > div {
+    padding: 1em 1.5em 0;
+    padding: 1rem 1.5rem 0;
+  }
+
+  ul {
+    ul {
+      padding-left: 1em;
+      border-color: rgba(#333,.1);
+    }
+  }
 }
 
 .hentry {
