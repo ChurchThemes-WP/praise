@@ -117,6 +117,18 @@ input[type='submit'] {
   }
 }
 
+.header-widget-area {
+
+  .widget {
+    background: rgba(#fff,.6);
+  }
+
+  .widget-title {
+    color: $grey;
+    background: rgba(#fff,.6);
+  }
+}
+
 .widget {
   background: rgba(#999,.1);
   padding: 0 0 1.5em 0;
@@ -189,6 +201,16 @@ input[type='submit'] {
       padding-left: 1em;
       border-color: rgba(#333,.1);
     }
+  }
+}
+
+.ctc-giving-widget {
+  padding-bottom: 1.5em;
+  padding-bottom: 1.5rem;
+
+  p {
+    margin-bottom: 1em;
+    margin-bottom: 1rem;
   }
 }
 
