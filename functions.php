@@ -10,3 +10,24 @@ function enqueue_child_theme_styles() {
 add_action( 'wp_enqueue_scripts', 'enqueue_child_theme_styles' );
 
 require_once get_template_directory() . '/inc/colorcase.php';
+
+// Custom Header
+$args = array(
+  'flex-width'    => true,
+  'width'         => 0,
+  'flex-height'    => true,
+  'height'        => 250,
+  'default-image' => get_stylesheet_directory_uri() . '/assets/images/header.jpg',
+);
+
+add_theme_support( 'custom-header', $args );
+
+function praise_custom_header() {
+  ?>
+  <style type="text/css" id="custom-header-css">
+    .site-header { background-image: url('<?php echo get_custom_header()->url; ?>'); }
+  </style>
+  <?php
+}
+
+add_action( 'wp_head', 'praise_custom_header' );
