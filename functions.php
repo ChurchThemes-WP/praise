@@ -15,7 +15,7 @@ require_once get_template_directory() . '/inc/colorcase.php';
 $args = array(
   'flex-width'    => true,
   'width'         => 0,
-  'flex-height'    => true,
+  'flex-height'   => true,
   'height'        => 250,
   'default-image' => get_stylesheet_directory_uri() . '/assets/images/header.jpg',
 );
@@ -25,7 +25,7 @@ add_theme_support( 'custom-header', $args );
 function praise_custom_header() {
   ?>
   <style type="text/css" id="custom-header-css">
-    .site-header { background-image: url('<?php echo get_custom_header()->url; ?>'); }
+    .site-header { background-image: url('<?php header_image() ?>'); }
   </style>
   <?php
 }
