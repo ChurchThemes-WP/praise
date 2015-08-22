@@ -10,7 +10,9 @@ function enqueue_child_theme_styles() {
 
 add_action( 'wp_enqueue_scripts', 'enqueue_child_theme_styles' );
 
-require_once get_template_directory() . '/inc/colorcase.php';
+require_once get_stylesheet_directory() . '/inc/colorcase.php';
+
+require_once get_stylesheet_directory() . '/inc/customizer.php';
 
 // Custom Header
 $args = array(
@@ -36,7 +38,7 @@ add_action( 'wp_head', 'praise_custom_header' );
 /**
  * Returns the Google font stylesheet URL, if available.
  *
- * The use of Work Sans and Martel by default is localized. For languages
+ * The use of Lato and Source Serif Pro by default is localized. For languages
  * that use characters not supported by the font, the font can be disabled.
  *
  * @return string $fonts_url  Font stylesheet or empty string if disabled.
@@ -45,25 +47,25 @@ function praise_fonts_url() {
   $fonts_url = '';
 
   /* Translators: If there are characters in your language that are not
-   * supported by Work Sans, translate this to 'off'. Do not translate
+   * supported by Lato, translate this to 'off'. Do not translate
    * into your own language.
    */
-  $work_sans = _x( 'on', 'Work Sans font: on or off', 'rock' );
+  $lato = _x( 'on', 'Lato font: on or off', 'rock' );
 
   /* Translators: If there are characters in your language that are not
-   * supported by Martel, translate this to 'off'. Do not translate into your
+   * supported by Source Serif Pro, translate this to 'off'. Do not translate into your
    * own language.
    */
-  $martel = _x( 'on', 'Martel font: on or off', 'rock' );
+  $source_serif = _x( 'on', 'Source Serif Pro font: on or off', 'rock' );
 
-  if ( 'off' !== $work_sans || 'off' !== $martel ) {
+  if ( 'off' !== $lato || 'off' !== $source_serif ) {
     $font_families = array();
 
-    if ( 'off' !== $work_sans )
-      $font_families[] = 'Work Sans:400,700,800';
+    if ( 'off' !== $lato )
+      $font_families[] = 'Lato:400,700,900';
 
-    if ( 'off' !== $martel )
-      $font_families[] = 'Martel:400,200,300,600,700,800,900';
+    if ( 'off' !== $source_serif )
+      $font_families[] = 'Source Serif Pro:400,700';
 
     $query_args = array(
       'family' => urlencode( implode( '|', $font_families ) ),
@@ -74,3 +76,11 @@ function praise_fonts_url() {
 
   return $fonts_url;
 }
+
+function praise_add_header_bar(){
+  if( get_theme_mod( 'show_header_bar' ) === 'true' ){
+    get_template_part( 'header', 'bar' );
+  }
+}
+
+add_action( 'rock_header_before', 'praise_add_header_bar' );
