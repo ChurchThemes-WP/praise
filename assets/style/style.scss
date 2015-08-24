@@ -85,7 +85,7 @@ input[type='submit'] {
 .site-description {
   color: #fff;
   color: rgba(#fff,.8);
-  font-size: 1em;
+  font-size: 1.3em;
   font-weight: 500;
 }
 
@@ -269,4 +269,42 @@ input[type='submit'] {
   font-size: 14px;
   font-family: $sans;
   color: $grey;
+}
+
+
+#header-top-bar{
+  background-color: $darkgrey;
+  color: white;
+  font-family: $sans;
+  font-size: .8em;
+  font-weight: 700;
+  text-align: center;
+
+  @media #{$large-up} {
+
+    div:first-child{
+      float: left;
+    }
+
+    div:last-child{
+      float: right;
+    }
+
+  }
+}
+
+.single-fl-builder-template {
+
+  .type-fl-builder-template{
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .page-title{
+    display: none;
+  }
+
+  #secondary{
+    display: none;
+  }
 }
