@@ -38,6 +38,13 @@ function praise_header_style() {
 	.site-header{
 		background-image: url("<?php header_image(); ?>");
 	}
+
+	<?php if( get_header_image() === get_stylesheet_directory_uri() . '/assets/images/header.jpg' ){ ?>
+		.site-header{
+			background-size: cover;
+			background-position: bottom center;
+		}
+	<?php } ?>
 	</style>
 	<?php
 
