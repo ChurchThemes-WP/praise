@@ -41,7 +41,9 @@ a.button,
 a.button:visited,
 input[type='submit'] {
   background: $primary;
-  color: $darkgrey;
+  border: 3px solid white;
+  color: white;
+  font-family: $sans;
 
   &:hover {
     background: darken($primary, 10%);
@@ -49,11 +51,28 @@ input[type='submit'] {
   }
 }
 
-.site-header {
-  background-image: url('assets/images/header.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 60%;
+a.fl-button,
+.fl-builder-content a.fl-button {
+
+  &,
+  &:visited{
+    background-color: $primary;
+    border: 3px solid white;
+    color: white;
+    font-family: $sans;
+    border-radius: 0;
+  }
+
+  &:hover{
+    background-color: darken($primary,10%);
+  }
+}
+a.fl-button *,
+a.fl-button:visited *,
+.fl-builder-content a.fl-button *,
+.fl-builder-content a.fl-button:visited * {
+  color: white;
+  border-radius: 0;
 }
 
 .site-logo {
@@ -65,14 +84,16 @@ input[type='submit'] {
 }
 
 .site-title{
+  margin-bottom: 0;
+
   a {
     color: #fff;
     line-height: .8;
     font-weight: 800;
-    font-size: 1.2em;
+    font-size: 1em;
+    line-height: 1;
     margin: 0;
     padding: 0;
-    text-transform: uppercase;
     transition: 200ms opacity linear;
 
     &:hover{
@@ -85,12 +106,49 @@ input[type='submit'] {
 .site-description {
   color: #fff;
   color: rgba(#fff,.8);
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: 500;
+  font-family: $sans;
 }
 
 .main-navigation-container {
   background: transparent;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+h1{
+  font-size: 2.4em;
+}
+
+h2{
+  font-size: 1.3em;
+}
+
+h3{
+  font-size: 1.2em;
+}
+
+h4{
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+h5{
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+h6{
+  font-size: 1em;
+  margin-bottom: 0;
+  font-weight: bold;
 }
 
 .main-navigation {
@@ -102,9 +160,11 @@ input[type='submit'] {
 
     a {
       color: $darkgrey;
-      font-weight: 800;
+      font-weight: 700;
       text-transform: uppercase;
       font-family: $sans;
+      font-size: 14px;
+      padding: 20px 10px;
     }
 
     &:hover,
